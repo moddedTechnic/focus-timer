@@ -1,5 +1,4 @@
 use core::ops::DerefMut;
-use defmt::info;
 use embassy_futures::join::join;
 use embassy_sync::blocking_mutex::raw::CriticalSectionRawMutex;
 use embassy_sync::mutex::Mutex;
