@@ -438,7 +438,7 @@ dependencies = [
 [[package]]
 name = "nrf-time"
 version = "0.1.0"
-source = "git+https://github.com/moddedTechnic/nrf-time.git#9f84110c7dcdec5a2068190e0aab4b4f5d218fc3"
+source = "git+https://github.com/moddedTechnic/nrf-time.git#1b53d6d48823f72e203148db1ddd690c10ccea85"
 dependencies = [
  "cortex-m",
  "defmt",
