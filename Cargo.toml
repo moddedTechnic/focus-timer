@@ -11,11 +11,15 @@ defmt-rtt = "0.4.1"
 embassy-executor = { version = "0.7.0", features = ["arch-cortex-m", "defmt", "executor-thread"] }
 embassy-futures = { version = "0.1.1", features = ["defmt"] }
 embassy-sync = { version = "0.6.2", features = ["defmt"] }
-embedded-hal = { version = "1.0.0", features = ["defmt-03"] }
+embedded-hal = { version = "1.0.0" }
 embedded-hal-async = "1.0.0"
 panic-probe = { version = "0.3.2", features = ["print-defmt"] }
 nrf52833-hal = { git = "https://github.com/moddedTechnic/nrf-hal.git" }
 nrf-time = { git = "https://github.com/moddedTechnic/nrf-time.git", features = ["defmt"] }
+microbit = { git = "https://github.com/moddedTechnic/microbit", package = "microbit-v2" }
+futures-util = { version = "0.3.31", default-features = false }
+microbit-text = "1.0.0"
+tiny-led-matrix = "1.0.2"
 
 [[bin]]
 name = "traffic-light-controller"

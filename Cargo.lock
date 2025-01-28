@@ -257,9 +257,6 @@ name = "embedded-hal"
 version = "1.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "361a90feb7004eca4019fb28352a9465666b24f840f5c3cddf0ff13920590b89"
-dependencies = [
- "defmt",
-]
 
 [[package]]
 name = "embedded-hal-async"
@@ -322,9 +319,13 @@ dependencies = [
  "embassy-sync",
  "embedded-hal 1.0.0",
  "embedded-hal-async",
+ "futures-util",
+ "microbit-text",
+ "microbit-v2",
  "nrf-time",
  "nrf52833-hal",
  "panic-probe",
+ "tiny-led-matrix",
 ]
 
 [[package]]
@@ -399,6 +400,33 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "b4ce301924b7887e9d637144fdade93f9dfff9b60981d4ac161db09720d39aa5"
 
 [[package]]
+name = "microbit-common"
+version = "0.15.1"
+source = "git+https://github.com/moddedTechnic/microbit#349729ab22f9fbd01a913f766f93546d821e3dca"
+dependencies = [
+ "embedded-hal 1.0.0",
+ "nrf52833-hal",
+ "tiny-led-matrix",
+]
+
+[[package]]
+name = "microbit-text"
+version = "1.0.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "029db169f7b5f0253f2b348a1f580ed532f7df769fc88ca9e1871ca92ec04c40"
+dependencies = [
+ "tiny-led-matrix",
+]
+
+[[package]]
+name = "microbit-v2"
+version = "0.15.1"
+source = "git+https://github.com/moddedTechnic/microbit#349729ab22f9fbd01a913f766f93546d821e3dca"
+dependencies = [
+ "microbit-common",
+]
+
+[[package]]
 name = "nb"
 version = "0.1.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -438,11 +466,10 @@ dependencies = [
 [[package]]
 name = "nrf-time"
 version = "0.1.0"
-source = "git+https://github.com/moddedTechnic/nrf-time.git#1b53d6d48823f72e203148db1ddd690c10ccea85"
+source = "git+https://github.com/moddedTechnic/nrf-time.git#10413b67541d2e0ecdc4aafd6a39ef662dedc170"
 dependencies = [
  "cortex-m",
  "defmt",
- "embedded-hal-async",
  "futures-util",
  "nrf52833-hal",
 ]
@@ -619,6 +646,12 @@ dependencies = [
  "quote",
  "syn",
 ]
+
+[[package]]
+name = "tiny-led-matrix"
+version = "1.0.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "a718c727b686154a7c7913f70d7ebc8956f701cbab466bc22035cb27f378882b"
 
 [[package]]
 name = "typenum"
